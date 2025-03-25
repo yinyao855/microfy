@@ -1,0 +1,4 @@
+nltk~=3.9.1
+scikit-learn~=1.6.1
+numpy~=2.2.4
+setuptools~=75.8.0

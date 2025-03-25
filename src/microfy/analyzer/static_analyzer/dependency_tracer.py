@@ -3,8 +3,8 @@ import json
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Set, Dict, Optional, Tuple, List
-from analyzer.static_analyzer.ast_symtable import SymbolTableBuilder, Scope, Symbol
-from analyzer.static_analyzer.const import builtin_funcs
+from .ast_symtable import SymbolTableBuilder, Scope, Symbol
+from .const import builtin_funcs
 
 
 # 记录函数依赖
@@ -180,7 +180,7 @@ class DependencyTracer(ast.NodeVisitor):
 
 
 if __name__ == "__main__":
-    with open("../../examples/monolithic_demo/main.py", "r") as file:
+    with open("../../../../examples/flask_demo/app.py", "r") as file:
         code = file.read()
 
     tracer = DependencyTracer(code, "views")

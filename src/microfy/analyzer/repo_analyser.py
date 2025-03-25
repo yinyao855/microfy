@@ -2,7 +2,7 @@ import ast
 import fnmatch
 from pathlib import Path
 from typing import Dict, List
-from analyzer.static_analyzer.dependency_tracer import DependencyNode, DependencyTracer
+from .static_analyzer.dependency_tracer import DependencyNode, DependencyTracer
 
 
 def should_ignore(path, rules, base_path):
@@ -68,7 +68,7 @@ class RepoAnalyzer:
             res, funcs = tracer.analyze(tree)
             self.global_depend_map.update(res)
             self.obj_funcs.update(funcs)
-            tracer.save_analysis(f"{module_name}.json")
+            # tracer.save_analysis(f"{module_name}.json")
 
         # # 下面将以user.py下的get_user为例，展示如何将其函数化
         # get_user_func = self.global_depend_map[self.obj_funcs['get_user']]
@@ -82,9 +82,3 @@ class RepoAnalyzer:
         # print(get_user_func.dependencies.keys())
         # for dep in get_user_func.dependencies.values():
         #     print(ast.unparse(dep.node))
-
-
-if __name__ == "__main__":
-    ignores = ['__pycache__', '.git', '.idea', '.venv', 'node_modules', "__init__.py"]
-    repo_analyzer = RepoAnalyzer("/Users/yaoyin/PycharmProjects/auto-tracer/job", ignores)
-    repo_analyzer.analyze()

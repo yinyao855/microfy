@@ -3,7 +3,7 @@ import json
 from collections import defaultdict
 from dataclasses import dataclass
 from typing import Dict, Optional, List
-from analyzer.static_analyzer.const import builtin_funcs
+from .const import builtin_funcs
 
 
 # 根据AST构建符号表
