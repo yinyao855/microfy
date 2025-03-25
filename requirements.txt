@@ -2,3 +2,5 @@ nltk~=3.9.1
 scikit-learn~=1.6.1
 numpy~=2.2.4
 setuptools~=75.8.0
+networkx~=3.4.2
+sqlglot~=26.11.1
