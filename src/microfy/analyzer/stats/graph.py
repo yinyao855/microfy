@@ -334,7 +334,7 @@ class GraphBuilder:
                             self.G[node_id][prev_node_id]["weight"] += weight
                         else:
                             self.G.add_edge(prev_node_id, node_id, weight=weight)
-                else:
+                elif node["type"] == "api":
                     self.apis.append(node)
                     if node.get("weight") > 0:
                         weight = node.get("weight")
