@@ -1,9 +1,8 @@
 # 项目依赖图构建
 
-项目依赖图的数据来源于skywalking的监控数据，具体使用方法如下：
-在项目根目录下创建tests文件夹，再创建一个test_graph.py文件，将以下代码复制到test_graph.py中，用pycharm运行即可。
+项目依赖图的数据来源于skywalking的监控数据，具体使用方法如下，也可以查看[示例代码](../examples/graph/build_graph.py)。
 ```python
-from src.microfy.analyzer.stats.graph import GraphBuilder, generate_echarts_html
+from microfy.analyzer.stats.graph import GraphBuilder, generate_echarts_html
 
 api_file_path = "./flask_demo_apis.json"
 

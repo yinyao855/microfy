@@ -1,0 +1,11 @@
+[
+    {
+        "name": "/api/orders/{int}"
+    },
+    {
+        "name": "/api/users/{int}"
+    },
+    {
+        "name": "/api/products/{int}"
+    }
+]

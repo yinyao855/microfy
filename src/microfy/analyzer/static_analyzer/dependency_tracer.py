@@ -177,13 +177,3 @@ class DependencyTracer(ast.NodeVisitor):
         # 用json库导出
         with open(output_file, "w") as f:
             json.dump([node.depend_to_json() for node in self.depend_map.values()], f, indent=4)
-
-
-if __name__ == "__main__":
-    with open("../../../../examples/flask_demo/app.py", "r") as file:
-        code = file.read()
-
-    tracer = DependencyTracer(code, "views")
-    tree = ast.parse(code)
-    tracer.analyze(tree)
-    tracer.save_analysis()

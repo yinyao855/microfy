@@ -1,0 +1,54 @@
+[
+    {
+        "name": "POST:/order-details",
+        "weight": 1
+    },
+    {
+        "name": "GET:/categories/name/{str}",
+        "weight": 1
+    },
+    {
+        "name": "GET:/users/id/{int}",
+        "weight": 1
+    },
+    {
+        "name": "POST:/orders",
+        "weight": 1
+    },
+    {
+        "name": "POST:/users/register",
+        "weight": 1
+    },
+    {
+        "name": "POST:/categories",
+        "weight": 1
+    },
+    {
+        "name": "GET:/products/id/{int}",
+        "weight": 1
+    },
+    {
+        "name": "POST:/payment-records",
+        "weight": 1
+    },
+    {
+        "name": "POST:/products",
+        "weight": 1
+    },
+    {
+        "name": "GET:/users/username/test",
+        "weight": 1
+    },
+    {
+        "name": "GET:/products/id/{int}",
+        "weight": 1
+    },
+    {
+        "name": "GET:/products/name/{str}",
+        "weight": 1
+    },
+    {
+        "name": "GET:/orders/id/{int}",
+        "weight": 1
+    }
+]

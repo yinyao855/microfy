@@ -2,14 +2,6 @@ import setuptools
 
 curr_version = ""
 
-# package_data = {
-#     "microfy": [
-#         "VERSION",
-#         "requirements.txt",
-#         "src/microfy/*"
-#     ]
-# }
-
 
 def get_version():
     global curr_version
@@ -29,7 +21,7 @@ def upload():
         version=curr_version,
         author="yinyao855",
         author_email="1311095683@qq.com",
-        description="Automate Your Monolith to Microservices Migration",  # 库描述
+        description="Automate Your Monolith to Microservices Migration",
         long_description=long_description,
         long_description_content_type="text/markdown",
         url="https://pypi.org/project/microfy/",  # 库的官方地址

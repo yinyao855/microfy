@@ -1,0 +1,4693 @@
+[
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970005",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970004",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653214197,
+            "endTime": 1742653214215,
+            "endpointName": "POST:/payment-records",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/payment-records"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970005",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970004",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653214200,
+            "endTime": 1742653214210,
+            "endpointName": "com.example.demo.controller.PaymentRecordController.addPaymentRecord(com.example.demo.model.PaymentRecord)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970005",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970004",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653214200,
+            "endTime": 1742653214210,
+            "endpointName": "com.example.demo.service.PaymentRecordService.addPaymentRecord(com.example.demo.model.PaymentRecord)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970005",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970004",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653214200,
+            "endTime": 1742653214201,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970005",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970004",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653214203,
+            "endTime": 1742653214204,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into payment_record (order_id,price,status) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[NULL,48.0,aute mollit adipisicing]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970005",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970004",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653214205,
+            "endTime": 1742653214208,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970005",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426532141970004",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653214215,
+            "endTime": 1742653214215,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653209132,
+            "endTime": 1742653209157,
+            "endpointName": "POST:/order-details",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/order-details"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653209135,
+            "endTime": 1742653209155,
+            "endpointName": "com.example.demo.controller.OrderDetailController.addOrderDetail(com.example.demo.model.OrderDetail)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653209135,
+            "endTime": 1742653209155,
+            "endpointName": "com.example.demo.service.OrderDetailService.addOrderDetail(com.example.demo.model.OrderDetail)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653209135,
+            "endTime": 1742653209136,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320002",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653209138,
+            "endTime": 1742653209139,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into order_detail (order_id,quantity,total_price) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[NULL,46,24.0]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320002",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653209140,
+            "endTime": 1742653209154,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426532091320002",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653209157,
+            "endTime": 1742653209157,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653202858,
+            "endTime": 1742653202886,
+            "endpointName": "POST:/order-details",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/order-details"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653202861,
+            "endTime": 1742653202882,
+            "endpointName": "com.example.demo.controller.OrderDetailController.addOrderDetail(com.example.demo.model.OrderDetail)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653202861,
+            "endTime": 1742653202882,
+            "endpointName": "com.example.demo.service.OrderDetailService.addOrderDetail(com.example.demo.model.OrderDetail)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653202861,
+            "endTime": 1742653202862,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580002",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653202864,
+            "endTime": 1742653202878,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into order_detail (order_id,quantity,total_price) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[NULL,46,24.0]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580002",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653202879,
+            "endTime": 1742653202882,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426532028580002",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653202885,
+            "endTime": 1742653202886,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195327,
+            "endTime": 1742653195381,
+            "endpointName": "GET:/orders/id/1",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/orders/id/1"
+                },
+                {
+                    "key": "http.method",
+                    "value": "GET"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195330,
+            "endTime": 1742653195378,
+            "endpointName": "com.example.demo.controller.OrderController.getOrderById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195330,
+            "endTime": 1742653195378,
+            "endpointName": "com.example.demo.service.OrderService.getOrderById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195331,
+            "endTime": 1742653195334,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195337,
+            "endTime": 1742653195345,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select o1_0.id,od1_0.id,od1_0.quantity,od1_0.total_price,pr1_0.id,pr1_0.price,pr1_0.status,p1_0.id,c1_0.id,c1_0.name,p1_0.name,p1_0.price,p1_0.stock,o1_0.status,u1_0.id,u1_0.email,u1_0.password,u1_0.username from orders o1_0 left join order_detail od1_0 on o1_0.id=od1_0.order_id left join payment_record pr1_0 on o1_0.id=pr1_0.order_id left join product p1_0 on p1_0.id=o1_0.product_id left join category c1_0 on c1_0.id=p1_0.category_id left join user u1_0 on u1_0.id=o1_0.user_id where o1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195362,
+            "endTime": 1742653195364,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 6,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195366,
+            "endTime": 1742653195373,
+            "endpointName": "com.example.demo.service.OrderService.getOrderDetailsByOrderId(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 7,
+            "parentSpanId": 6,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195371,
+            "endTime": 1742653195372,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select od1_0.id,od1_0.order_id,od1_0.quantity,od1_0.total_price from order_detail od1_0 left join orders o1_0 on o1_0.id=od1_0.order_id where o1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 8,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195373,
+            "endTime": 1742653195378,
+            "endpointName": "com.example.demo.service.OrderService.getPaymentRecordByOrderId(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 9,
+            "parentSpanId": 8,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195377,
+            "endTime": 1742653195378,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select pr1_0.id,pr1_0.order_id,pr1_0.price,pr1_0.status from payment_record pr1_0 left join orders o1_0 on o1_0.id=pr1_0.order_id where o1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531953270002",
+            "spanId": 10,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653195381,
+            "endTime": 1742653195381,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191970,
+            "endTime": 1742653192003,
+            "endpointName": "POST:/orders",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/orders"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191971,
+            "endTime": 1742653192001,
+            "endpointName": "com.example.demo.controller.OrderController.createOrder(com.example.demo.model.Order)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191971,
+            "endTime": 1742653192001,
+            "endpointName": "com.example.demo.service.OrderService.createOrder(com.example.demo.model.Order)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191971,
+            "endTime": 1742653191975,
+            "endpointName": "com.example.demo.service.UserService.getUserById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 4,
+            "parentSpanId": 3,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191971,
+            "endTime": 1742653191972,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 5,
+            "parentSpanId": 3,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191973,
+            "endTime": 1742653191974,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select u1_0.id,u1_0.email,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 6,
+            "parentSpanId": 3,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191974,
+            "endTime": 1742653191975,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 7,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191975,
+            "endTime": 1742653191979,
+            "endpointName": "com.example.demo.service.ProductService.getProductById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 8,
+            "parentSpanId": 7,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191976,
+            "endTime": 1742653191977,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select p1_0.id,c1_0.id,c1_0.name,p1_0.name,p1_0.price,p1_0.stock from product p1_0 left join category c1_0 on c1_0.id=p1_0.category_id where p1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 9,
+            "parentSpanId": 7,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191977,
+            "endTime": 1742653191978,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 10,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191980,
+            "endTime": 1742653191980,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into orders (product_id,status,user_id) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1,unpaid,1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 11,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191981,
+            "endTime": 1742653191995,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 12,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191997,
+            "endTime": 1742653191998,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into payment_record (order_id,price,status) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[34,95.0,Pending]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 13,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653191998,
+            "endTime": 1742653192001,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531919700002",
+            "spanId": 14,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653192003,
+            "endTime": 1742653192003,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190307,
+            "endTime": 1742653190339,
+            "endpointName": "POST:/orders",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/orders"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190308,
+            "endTime": 1742653190337,
+            "endpointName": "com.example.demo.controller.OrderController.createOrder(com.example.demo.model.Order)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190308,
+            "endTime": 1742653190337,
+            "endpointName": "com.example.demo.service.OrderService.createOrder(com.example.demo.model.Order)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190308,
+            "endTime": 1742653190317,
+            "endpointName": "com.example.demo.service.UserService.getUserById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 4,
+            "parentSpanId": 3,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190309,
+            "endTime": 1742653190310,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 5,
+            "parentSpanId": 3,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190313,
+            "endTime": 1742653190315,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select u1_0.id,u1_0.email,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 6,
+            "parentSpanId": 3,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190315,
+            "endTime": 1742653190316,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 7,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190317,
+            "endTime": 1742653190322,
+            "endpointName": "com.example.demo.service.ProductService.getProductById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 8,
+            "parentSpanId": 7,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190319,
+            "endTime": 1742653190320,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select p1_0.id,c1_0.id,c1_0.name,p1_0.name,p1_0.price,p1_0.stock from product p1_0 left join category c1_0 on c1_0.id=p1_0.category_id where p1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 9,
+            "parentSpanId": 7,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190321,
+            "endTime": 1742653190321,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 10,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190323,
+            "endTime": 1742653190324,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into orders (product_id,status,user_id) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1,unpaid,1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 11,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190325,
+            "endTime": 1742653190331,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 12,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190333,
+            "endTime": 1742653190334,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into payment_record (order_id,price,status) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[33,95.0,Pending]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 13,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190334,
+            "endTime": 1742653190337,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531903070002",
+            "spanId": 14,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653190338,
+            "endTime": 1742653190338,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188500,
+            "endTime": 1742653188572,
+            "endpointName": "POST:/orders",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/orders"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188536,
+            "endTime": 1742653188567,
+            "endpointName": "com.example.demo.controller.OrderController.createOrder(com.example.demo.model.Order)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188536,
+            "endTime": 1742653188567,
+            "endpointName": "com.example.demo.service.OrderService.createOrder(com.example.demo.model.Order)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188536,
+            "endTime": 1742653188543,
+            "endpointName": "com.example.demo.service.UserService.getUserById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 4,
+            "parentSpanId": 3,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188537,
+            "endTime": 1742653188537,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 5,
+            "parentSpanId": 3,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188539,
+            "endTime": 1742653188540,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select u1_0.id,u1_0.email,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 6,
+            "parentSpanId": 3,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188541,
+            "endTime": 1742653188542,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 7,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188543,
+            "endTime": 1742653188548,
+            "endpointName": "com.example.demo.service.ProductService.getProductById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 8,
+            "parentSpanId": 7,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188544,
+            "endTime": 1742653188545,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select p1_0.id,c1_0.id,c1_0.name,p1_0.name,p1_0.price,p1_0.stock from product p1_0 left join category c1_0 on c1_0.id=p1_0.category_id where p1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 9,
+            "parentSpanId": 7,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188546,
+            "endTime": 1742653188547,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 10,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188550,
+            "endTime": 1742653188551,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into orders (product_id,status,user_id) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1,unpaid,1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 11,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188553,
+            "endTime": 1742653188555,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 12,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188559,
+            "endTime": 1742653188563,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into payment_record (order_id,price,status) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[32,95.0,Pending]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 13,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188564,
+            "endTime": 1742653188566,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531885000002",
+            "spanId": 14,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653188571,
+            "endTime": 1742653188571,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653178308,
+            "endTime": 1742653178324,
+            "endpointName": "GET:/products/id/2",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/products/id/2"
+                },
+                {
+                    "key": "http.method",
+                    "value": "GET"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653178311,
+            "endTime": 1742653178321,
+            "endpointName": "com.example.demo.controller.ProductController.getProductById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653178311,
+            "endTime": 1742653178321,
+            "endpointName": "com.example.demo.service.ProductService.getProductById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653178311,
+            "endTime": 1742653178314,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080002",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653178317,
+            "endTime": 1742653178318,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select p1_0.id,c1_0.id,c1_0.name,p1_0.name,p1_0.price,p1_0.stock from product p1_0 left join category c1_0 on c1_0.id=p1_0.category_id where p1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[2]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080002",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653178319,
+            "endTime": 1742653178320,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531783080002",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653178323,
+            "endTime": 1742653178323,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653172740,
+            "endTime": 1742653172750,
+            "endpointName": "GET:/products/id/1",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/products/id/1"
+                },
+                {
+                    "key": "http.method",
+                    "value": "GET"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653172742,
+            "endTime": 1742653172748,
+            "endpointName": "com.example.demo.controller.ProductController.getProductById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653172742,
+            "endTime": 1742653172748,
+            "endpointName": "com.example.demo.service.ProductService.getProductById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653172742,
+            "endTime": 1742653172743,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390002",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653172744,
+            "endTime": 1742653172746,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select p1_0.id,c1_0.id,c1_0.name,p1_0.name,p1_0.price,p1_0.stock from product p1_0 left join category c1_0 on c1_0.id=p1_0.category_id where p1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390002",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653172747,
+            "endTime": 1742653172747,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531727390002",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653172750,
+            "endTime": 1742653172750,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653169596,
+            "endTime": 1742653169610,
+            "endpointName": "GET:/products/name/p7",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/products/name/p7"
+                },
+                {
+                    "key": "http.method",
+                    "value": "GET"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653169598,
+            "endTime": 1742653169608,
+            "endpointName": "com.example.demo.controller.ProductController.getProductByName(java.lang.String)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653169598,
+            "endTime": 1742653169608,
+            "endpointName": "com.example.demo.service.ProductService.getProductByName(java.lang.String)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653169601,
+            "endTime": 1742653169602,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960002",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653169602,
+            "endTime": 1742653169603,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select p1_0.id,p1_0.category_id,p1_0.name,p1_0.price,p1_0.stock from product p1_0 where p1_0.name=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[p7]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960002",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653169605,
+            "endTime": 1742653169606,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select c1_0.id,c1_0.name from category c1_0 where c1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531695960002",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653169610,
+            "endTime": 1742653169610,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840002",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653160284,
+            "endTime": 1742653160299,
+            "endpointName": "POST:/products",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/products"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840002",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653160287,
+            "endTime": 1742653160295,
+            "endpointName": "com.example.demo.controller.ProductController.addProduct(com.example.demo.model.Product)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840002",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653160287,
+            "endTime": 1742653160295,
+            "endpointName": "com.example.demo.service.ProductService.addProduct(com.example.demo.model.Product)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840002",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653160287,
+            "endTime": 1742653160287,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840002",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653160290,
+            "endTime": 1742653160292,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into product (category_id,name,price,stock) values (?,?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1,p7,76.0,35]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840002",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653160293,
+            "endTime": 1742653160295,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840003",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531602840002",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653160299,
+            "endTime": 1742653160299,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653156268,
+            "endTime": 1742653156311,
+            "endpointName": "POST:/products",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/products"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653156275,
+            "endTime": 1742653156306,
+            "endpointName": "com.example.demo.controller.ProductController.addProduct(com.example.demo.model.Product)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653156275,
+            "endTime": 1742653156306,
+            "endpointName": "com.example.demo.service.ProductService.addProduct(com.example.demo.model.Product)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653156275,
+            "endTime": 1742653156276,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653156296,
+            "endTime": 1742653156299,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into product (category_id,name,price,stock) values (?,?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1,p5,76.0,35]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680000",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653156301,
+            "endTime": 1742653156305,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.105.17426531562680000",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653156311,
+            "endTime": 1742653156311,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653147940,
+            "endTime": 1742653148027,
+            "endpointName": "GET:/categories/name/c5",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/categories/name/c5"
+                },
+                {
+                    "key": "http.method",
+                    "value": "GET"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653147942,
+            "endTime": 1742653147981,
+            "endpointName": "com.example.demo.controller.CategoryController.getCategoryByName(java.lang.String)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653147942,
+            "endTime": 1742653147981,
+            "endpointName": "com.example.demo.service.CategoryService.getCategoryByName(java.lang.String)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653147947,
+            "endTime": 1742653147948,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653147948,
+            "endTime": 1742653147949,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select c1_0.id,c1_0.name from category c1_0 where c1_0.name=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[c5]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400000",
+            "spanId": 5,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653147998,
+            "endTime": 1742653148012,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select p1_0.category_id,p1_0.id,p1_0.name,p1_0.price,p1_0.stock from product p1_0 where p1_0.category_id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[6]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.114.17426531479400000",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653148027,
+            "endTime": 1742653148027,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653141066,
+            "endTime": 1742653141085,
+            "endpointName": "POST:/categories",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/categories"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653141069,
+            "endTime": 1742653141082,
+            "endpointName": "com.example.demo.controller.CategoryController.addCategory(com.example.demo.model.Category)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653141069,
+            "endTime": 1742653141082,
+            "endpointName": "com.example.demo.service.CategoryService.addCategory(com.example.demo.model.Category)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653141071,
+            "endTime": 1742653141071,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653141073,
+            "endTime": 1742653141074,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into category (name) values (?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[c6]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660000",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653141075,
+            "endTime": 1742653141081,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.113.17426531410660000",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653141084,
+            "endTime": 1742653141084,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653136290,
+            "endTime": 1742653136344,
+            "endpointName": "POST:/categories",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/categories"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653136301,
+            "endTime": 1742653136340,
+            "endpointName": "com.example.demo.controller.CategoryController.addCategory(com.example.demo.model.Category)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653136301,
+            "endTime": 1742653136340,
+            "endpointName": "com.example.demo.service.CategoryService.addCategory(com.example.demo.model.Category)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653136301,
+            "endTime": 1742653136302,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653136323,
+            "endTime": 1742653136332,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into category (name) values (?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[c5]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900000",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653136336,
+            "endTime": 1742653136339,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.112.17426531362900000",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653136344,
+            "endTime": 1742653136344,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653126739,
+            "endTime": 1742653126757,
+            "endpointName": "GET:/users/id/1",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/users/id/1"
+                },
+                {
+                    "key": "http.method",
+                    "value": "GET"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653126742,
+            "endTime": 1742653126754,
+            "endpointName": "com.example.demo.controller.UserController.getUserById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653126742,
+            "endTime": 1742653126754,
+            "endpointName": "com.example.demo.service.UserService.getUserById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653126742,
+            "endTime": 1742653126743,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653126748,
+            "endTime": 1742653126751,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select u1_0.id,u1_0.email,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390000",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653126751,
+            "endTime": 1742653126753,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.111.17426531267390000",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653126757,
+            "endTime": 1742653126757,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653125235,
+            "endTime": 1742653125276,
+            "endpointName": "GET:/users/id/1",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/users/id/1"
+                },
+                {
+                    "key": "http.method",
+                    "value": "GET"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653125240,
+            "endTime": 1742653125275,
+            "endpointName": "com.example.demo.controller.UserController.getUserById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653125241,
+            "endTime": 1742653125275,
+            "endpointName": "com.example.demo.service.UserService.getUserById(java.lang.Long)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653125241,
+            "endTime": 1742653125242,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653125270,
+            "endTime": 1742653125273,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select u1_0.id,u1_0.email,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[1]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350000",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653125274,
+            "endTime": 1742653125274,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.110.17426531252350000",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653125276,
+            "endTime": 1742653125276,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653121336,
+            "endTime": 1742653121346,
+            "endpointName": "GET:/users/username/test",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/users/username/test"
+                },
+                {
+                    "key": "http.method",
+                    "value": "GET"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653121338,
+            "endTime": 1742653121344,
+            "endpointName": "com.example.demo.controller.UserController.getUserByUsername(java.lang.String)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653121338,
+            "endTime": 1742653121344,
+            "endpointName": "com.example.demo.service.UserService.getUserByUsername(java.lang.String)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653121340,
+            "endTime": 1742653121341,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653121341,
+            "endTime": 1742653121343,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select u1_0.id,u1_0.email,u1_0.password,u1_0.username from user u1_0 where u1_0.username=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[test]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.109.17426531213360000",
+            "spanId": 5,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653121346,
+            "endTime": 1742653121346,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653119279,
+            "endTime": 1742653119822,
+            "endpointName": "GET:/users/username/test",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/users/username/test"
+                },
+                {
+                    "key": "http.method",
+                    "value": "GET"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653119295,
+            "endTime": 1742653119809,
+            "endpointName": "com.example.demo.controller.UserController.getUserByUsername(java.lang.String)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653119295,
+            "endTime": 1742653119809,
+            "endpointName": "com.example.demo.service.UserService.getUserByUsername(java.lang.String)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653119756,
+            "endTime": 1742653119757,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653119758,
+            "endTime": 1742653119760,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeQuery",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "select u1_0.id,u1_0.email,u1_0.password,u1_0.username from user u1_0 where u1_0.username=?"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[test]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.107.17426531192790000",
+            "spanId": 5,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653119822,
+            "endTime": 1742653119822,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653115471,
+            "endTime": 1742653115481,
+            "endpointName": "POST:/users/register",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/users/register"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653115473,
+            "endTime": 1742653115480,
+            "endpointName": "com.example.demo.controller.UserController.registerUser(com.example.demo.model.User)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653115473,
+            "endTime": 1742653115480,
+            "endpointName": "com.example.demo.service.UserService.registerUser(com.example.demo.model.User)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653115473,
+            "endTime": 1742653115473,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653115474,
+            "endTime": 1742653115476,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into user (email,password,username) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[test,test,test2]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710000",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653115476,
+            "endTime": 1742653115479,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.106.17426531154710000",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653115481,
+            "endTime": 1742653115481,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ],
+    [
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810000",
+            "spanId": 0,
+            "parentSpanId": -1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653111783,
+            "endTime": 1742653112552,
+            "endpointName": "POST:/users/register",
+            "type": "Entry",
+            "peer": "",
+            "component": "Tomcat",
+            "isError": false,
+            "layer": "Http",
+            "tags": [
+                {
+                    "key": "url",
+                    "value": "http://localhost:8080/users/register"
+                },
+                {
+                    "key": "http.method",
+                    "value": "POST"
+                },
+                {
+                    "key": "http.status_code",
+                    "value": "200"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810000",
+            "spanId": 1,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653112217,
+            "endTime": 1742653112472,
+            "endpointName": "com.example.demo.controller.UserController.registerUser(com.example.demo.model.User)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810000",
+            "spanId": 2,
+            "parentSpanId": 1,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653112219,
+            "endTime": 1742653112472,
+            "endpointName": "com.example.demo.service.UserService.registerUser(com.example.demo.model.User)",
+            "type": "Local",
+            "peer": "",
+            "component": "Unknown",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810000",
+            "spanId": 3,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653112244,
+            "endTime": 1742653112245,
+            "endpointName": "HikariCP/Connection/getConnection",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810000",
+            "spanId": 4,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653112351,
+            "endTime": 1742653112355,
+            "endpointName": "Mysql/JDBC/PreparedStatement/executeUpdate",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": "insert into user (email,password,username) values (?,?,?)"
+                },
+                {
+                    "key": "db.sql.parameters",
+                    "value": "[test,test,test2]"
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810000",
+            "spanId": 5,
+            "parentSpanId": 2,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653112465,
+            "endTime": 1742653112469,
+            "endpointName": "Mysql/JDBC/Connection/commit",
+            "type": "Exit",
+            "peer": "localhost:3306",
+            "component": "mysql-connector-java",
+            "isError": false,
+            "layer": "Database",
+            "tags": [
+                {
+                    "key": "db.type",
+                    "value": "Mysql"
+                },
+                {
+                    "key": "db.instance",
+                    "value": "springboot"
+                },
+                {
+                    "key": "db.statement",
+                    "value": ""
+                }
+            ],
+            "logs": [],
+            "attachedEvents": []
+        },
+        {
+            "traceId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810001",
+            "segmentId": "07d4d671f5ff42268f8db73fec4e5b20.108.17426531117810000",
+            "spanId": 6,
+            "parentSpanId": 0,
+            "refs": [],
+            "serviceCode": "micro-dev::micro-system",
+            "serviceInstanceName": "4647ecbe595a4c9babef25b3b7c8d5b9@169.254.40.151",
+            "startTime": 1742653112551,
+            "endTime": 1742653112551,
+            "endpointName": "HikariCP/Connection/close",
+            "type": "Local",
+            "peer": "",
+            "component": "HikariCP",
+            "isError": false,
+            "layer": "Unknown",
+            "tags": [],
+            "logs": [],
+            "attachedEvents": []
+        }
+    ]
+]
