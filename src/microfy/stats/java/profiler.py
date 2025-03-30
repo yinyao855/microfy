@@ -216,9 +216,9 @@ class JavaStructureVisitor(JavaParserVisitor):
         global index2name
         for target in target_list:
             if source == target:
-                return
+                continue
             if not self.classes.get(source) or not self.classes.get(target):
-                return
+                continue
             # add current interaction
             self.interaction_matrix[name2index[source]][name2index[target]] += 1
 
@@ -343,6 +343,13 @@ class JavaStructureVisitor(JavaParserVisitor):
         _, var_type_list = self.get_full_name(ctx.typeType().getText())
         self._add_dependency(self.current_scope_symbol, var_type_list)
         self._add_interaction(self.current_class, var_type_list)
+
+    def visitMethodCall(self, ctx: JavaParser.MethodCallContext):
+        # _, method_type_list = self.get_full_name(ctx.expression().getText())
+        # self._add_dependency(self.current_scope_symbol, method_type_list)
+        # self._add_interaction(self.current_class, method_type_list)
+        # print(ctx.getText())
+        self.visitChildren(ctx)
 
 
 class JavaStaticProfiler:

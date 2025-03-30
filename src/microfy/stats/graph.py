@@ -330,8 +330,8 @@ class GraphBuilder:
                     prev_node = next((n for n in trace if n["spanId"] == node["parentSpanId"]), None)
                     if prev_node:
                         prev_node_id = self.get_node_id(prev_node)
-                        if self.G.has_edge(node_id, prev_node_id):
-                            self.G[node_id][prev_node_id]["weight"] += weight
+                        if self.G.has_edge(prev_node_id, node_id):
+                            self.G[prev_node_id][node_id]["weight"] += weight
                         else:
                             self.G.add_edge(prev_node_id, node_id, weight=weight)
                 elif node["type"] == "api":

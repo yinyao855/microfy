@@ -14,7 +14,11 @@ class StaticGraphBuilder:
     def __init__(self, project_name: str, data=None):
         self.project_name = project_name
         self.data = data
-        self.G = nx.Graph()
+        self.G = nx.DiGraph()
+
+    def save_data(self, save_path: str):
+        with open(save_path, 'w') as f:
+            json.dump(self.data, f, indent=4)
 
     def load_data(self, data_path: str):
         with open(data_path, 'r') as f:
