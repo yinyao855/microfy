@@ -1,5 +1,5 @@
 import os
-from microfy.analyzer.stats.graph import GraphBuilder, generate_echarts_html
+from microfy.stats.graph import GraphBuilder, generate_echarts_html
 
 if not os.path.exists("res"):
     os.mkdir("res")

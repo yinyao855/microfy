@@ -3,7 +3,7 @@ from typing import List, Dict
 import numpy as np
 from antlr4 import InputStream, CommonTokenStream
 
-from analyzer.stats.java.profiler import JavaSymbol
+from stats.java.profiler import JavaSymbol
 from lang.java.JavaLexer import JavaLexer
 from lang.java.JavaParser import JavaParser
 from lang.java.JavaParserVisitor import JavaParserVisitor
