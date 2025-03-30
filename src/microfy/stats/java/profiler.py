@@ -252,8 +252,9 @@ class JavaStructureVisitor(JavaParserVisitor):
         full_name = ctx.qualifiedName().getText()
         if not self.classes.get(full_name):
             import_name = full_name.split('.')[-1]
-            self.symbols[full_name] = JavaSymbol("Import", import_name, full_name, self.file_path,
-                                                 ctx.start.line, ctx.stop.line, get_all_text(ctx))
+            if not self.symbols.get(full_name):
+                self.symbols[full_name] = JavaSymbol("Import", import_name, full_name, self.file_path,
+                                                     ctx.start.line, ctx.stop.line, get_all_text(ctx))
 
     def visitClassDeclaration(self, ctx: JavaParser.ClassDeclarationContext):
         original_scope_symbol = self.current_scope_symbol
@@ -305,7 +306,7 @@ class JavaStructureVisitor(JavaParserVisitor):
         self._add_dependency(self.current_scope_symbol, field_type_list)
         self._add_interaction(self.current_class, field_type_list)
 
-    def visitMethodDeclaration(self, ctx: JavaParser.MethodDeclarationContext):
+    def visit_method(self, ctx):
         original_scope_symbol = self.current_scope_symbol
         method_name = ctx.identifier().getText()
         params = ctx.formalParameters().formalParameterList()
@@ -330,6 +331,13 @@ class JavaStructureVisitor(JavaParserVisitor):
 
         self.visitChildren(ctx)
         self.current_scope_symbol = original_scope_symbol
+
+    def visitMethodDeclaration(self, ctx: JavaParser.MethodDeclarationContext):
+        self.visit_method(ctx)
+
+    def visitInterfaceCommonBodyDeclaration(self, ctx: JavaParser.InterfaceCommonBodyDeclarationContext):
+        # interface method
+        self.visit_method(ctx)
 
     def visitLocalVariableDeclaration(self, ctx: JavaParser.LocalVariableDeclarationContext):
         _, var_type_list = self.get_full_name(ctx.typeType().getText())
