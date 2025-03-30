@@ -3,10 +3,10 @@ from typing import List, Dict
 import numpy as np
 from antlr4 import InputStream, CommonTokenStream
 
-from src.microfy.analyzer.stats.java.collector import JavaClassStats
-from src.microfy.lang.java.JavaLexer import JavaLexer
-from src.microfy.lang.java.JavaParser import JavaParser
-from src.microfy.lang.java.JavaParserVisitor import JavaParserVisitor
+from analyzer.stats.java.profiler import JavaSymbol
+from lang.java.JavaLexer import JavaLexer
+from lang.java.JavaParser import JavaParser
+from lang.java.JavaParserVisitor import JavaParserVisitor
 
 """
 Java 代码结构分析
@@ -32,7 +32,7 @@ index2name = {}
 
 
 class JavaStructureVisitor(JavaParserVisitor):
-    def __init__(self, global_class_stats: Dict[str, JavaClassStats] = None, interaction_matrix: np.ndarray = None):
+    def __init__(self, global_class_stats: Dict[str, JavaSymbol] = None, interaction_matrix: np.ndarray = None):
         # 全局类信息
         self.global_class_stats = global_class_stats
         self.interaction_matrix = interaction_matrix
@@ -150,7 +150,7 @@ class JavaStructureVisitor(JavaParserVisitor):
 
 
 class SIMAnalyzer:
-    def __init__(self, files_list: List[str], class_stats: Dict[str, JavaClassStats]):
+    def __init__(self, files_list: List[str], class_stats: Dict[str, JavaSymbol]):
         self.files_list = files_list
         self.global_class_stats = class_stats
         self.interaction_matrix = np.zeros((len(class_stats), len(class_stats)), dtype=int)
@@ -188,7 +188,7 @@ class SIMAnalyzer:
 
         return self.interaction_matrix
 
-    def solve_inherited_interaction(self, cls: JavaClassStats):
+    def solve_inherited_interaction(self, cls: JavaSymbol):
         if not cls.hierarchy:
             return self.interaction_matrix[name2index[cls.full_name]]
         else:

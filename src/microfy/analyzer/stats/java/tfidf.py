@@ -8,9 +8,9 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-from src.microfy.lang.java.JavaLexer import JavaLexer
-from src.microfy.lang.java.JavaParser import JavaParser
-from src.microfy.lang.java.JavaParserVisitor import JavaParserVisitor
+from lang.java.JavaLexer import JavaLexer
+from lang.java.JavaParser import JavaParser
+from lang.java.JavaParserVisitor import JavaParserVisitor
 
 # 下载停用词数据
 nltk.download('stopwords')
