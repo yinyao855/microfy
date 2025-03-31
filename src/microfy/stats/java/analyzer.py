@@ -2,6 +2,7 @@ import os
 from typing import List, Optional
 from .profiler import JavaStaticProfiler
 from .tfidf import TFIDFAnalyzer
+from .dcm import DCMAnalyzer
 
 
 # java 项目分析器
@@ -15,6 +16,8 @@ class JavaAnalyzer:
         self.static_profiler: Optional[JavaStaticProfiler] = None
         # 类TF-IDF矩阵
         self.tfidf_analyzer: Optional[TFIDFAnalyzer] = None
+        # 动态调用矩阵
+        self.dcm_analyzer: Optional[DCMAnalyzer] = None
 
     def set_project_path(self, project_path: str):
         self.project_path = project_path
@@ -41,6 +44,12 @@ class JavaAnalyzer:
             self.get_java_files()
         self.tfidf_analyzer = TFIDFAnalyzer(self.files_list)
         self.tfidf_analyzer.generate_tfidf_matrix()
+
+    def generate_dcm_matrix(self):
+        if not self.static_profiler:
+            return
+
+        self.dcm_analyzer = DCMAnalyzer(self.static_profiler)
 
     def output(self):
         print('\n\033[1;32m======Structure Interaction Matrix======\033[0m')

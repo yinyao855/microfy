@@ -37,6 +37,7 @@ class JavaSymbol:
     - file_path: file path of symbol
     - start_lineno: start line number of symbol
     - stop_lineno: stop line number of symbol
+    - return_type: return type of method
     - params: method parameters
     - methods: method list
     - hierarchy: parent class or interface list
@@ -51,6 +52,7 @@ class JavaSymbol:
         self.file_path = file_path
         self.start_lineno = start_lineno
         self.stop_lineno = stop_lineno
+        self.return_type = ""
         self.params = []
         self.methods = {}
         self.code = code
@@ -65,6 +67,7 @@ class JavaSymbol:
             "file_path": self.file_path,
             "start_lineno": self.start_lineno,
             "stop_lineno": self.stop_lineno,
+            "return_type": self.return_type,
             "params": self.params,
             "methods": [m.sym_to_dict() for m in self.methods.values()],
             "code": self.code,
@@ -87,6 +90,7 @@ class JavaClassCollector(JavaParserVisitor):
     - file_path
     - start_lineno
     - stop_lineno
+    - return_type
     - params
     - methods
     - code
@@ -166,6 +170,8 @@ class JavaClassCollector(JavaParserVisitor):
         self.symbols[full_name] = JavaSymbol("Method", method_name, full_name, self.file_path,
                                              ctx.start.line, ctx.stop.line, get_all_text(ctx))
         self.symbols[full_name].params = param_list
+        return_type = self.get_full_name(ctx.typeTypeOrVoid().getText())
+        self.symbols[full_name].return_type = return_type
         self.short2full[method_name] = full_name
         # add method to current class or interface
         self.current_scope_symbol.methods[full_name] = self.symbols[full_name]
